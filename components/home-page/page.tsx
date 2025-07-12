@@ -12,19 +12,16 @@ import {useGSAP} from "@gsap/react";
 // import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import {SlideInAnimation} from "@/constants/animation";
+import SubtleBackground from "@/components/Sections/ui/subtleBg";
 
 
 const HomePage = ({setHoveredProject, hoveredProject}: {setHoveredProject: Function, hoveredProject: any}) => {
     //
-    SlideInAnimation()
-    // console.log('setHoveredProject')
-
-
-
+        SlideInAnimation()
     return (
-        <section className=" text-white w-fit ">
+        <section className=" text-white w-fit md:h-full md:overflow-y-visible h-[80vh] overflow-y-scroll">
 
-                <main className=" px-2 flex flex-col items-center justify-center md:max-w-[620px] w-fit mx-auto">
+                <main className=" relative z-10 px-2 flex flex-col items-center justify-center md:max-w-[620px] w-fit mx-auto">
                     <div className="  flex flex-col md:grid md:grid-cols-3 md:grid-rows-12 md:w-full md:h-[550] gap-3">
 
                         <div className="aboutpage relative opacity-0 relative top-0 -left-[80px] md:col-span-2 row-span-3 px-4 py-2 border default-rounded  smooth-expand" >

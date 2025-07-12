@@ -55,7 +55,7 @@ const TechItem: React.FC<TechItemProps> = ({ tech, index, onMouseOver, projectTe
         <div
             onMouseOver={() => onMouseOver(index)}
             className={`
-        md:w-full lg:w-full lg:mx-auto md:h-[100px] h-[80px] aspect-square select-none 
+        md:w-full lg:w-full lg:mx-auto md:h-[100px] h-[70px] aspect-square select-none 
         lg:hover:bg-white/[0.1] flex flex-col items-center justify-center mx-2 md:mx-0
         ${borderClass ? `border ${borderClass} border-dotted` : ''}
       `}
@@ -118,11 +118,11 @@ const TechStackPage = () => {
     return (
         <section className="lg:w-fit w-[80%]">
             <div className="flex gap-2 justify-between w-full">
-                <div className="flex items-center w-fit">
-                    <p className="md:text-sm text-[10px] mb-4 border md:w-fit w-[100%] px-10 py-4 smooth-expand">
+                <div className="flex items-center w-full md:w-fit">
+                    <p className="md:text-sm text-[10px] mb-4 md:border md:w-fit w-[100%] md:px-10 px-2 py-4 smooth-expand">
                         My Tech Stack.
                     </p>
-                    <p className="ml-4 md:text-sm text-[10px] mb-4 border font-bold tracking-widest md:w-fit w-[100%] px-10 py-4 smooth-expand">
+                    <p className="ml-4 md:text-sm text-[10px] mb-4 md:border font-bold tracking-widest md:w-fit w-[100%] md:px-10 px-2 py-4 smooth-expand">
                         {techStackTechs[currentTechIndex]?.techName || '....'}
                     </p>
                 </div>
@@ -136,7 +136,7 @@ const TechStackPage = () => {
             <p className="text-xs f">{project.current.title}</p>
             <div
                 onMouseLeave={() => updateGradientPosition(-1)}
-                className="border lg:w-[500px] md:w-[600px] md:grid lg:grid-cols-4 md:grid-cols-6 flex flex-wrap relative md:p-0 p-6"
+                className="border lg:w-[500px] md:w-[600px] md:grid lg:grid-cols-4 md:grid-cols-6 flex flex-wrap items-center justify-center relative md:p-0 p-6"
             >
                 <div ref={gradientRef} className="absolute transition-all duration-300 pointer-events-none lg:w-[125px] md:w-[100px] md:h-[100px] h-fit overflow-hidden hidden md:block">
                     <Image className="opacity-30" src={gradientImgUrl} alt={'Gradient'} />

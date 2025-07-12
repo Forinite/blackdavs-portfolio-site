@@ -5,13 +5,6 @@ import {defaultProject, project} from "@/constants/controller";
 import {InfoIcon} from "lucide-react";
 
 const ProjectInfo = ({setHoveredProject, hoveredProject}: {setHoveredProject: Function, hoveredProject: any}) => {
-    // const handleSetHoveredProject = (project:any)=> {
-    //     setHoveredProject(project)
-    // }
-    // useEffect(() => {
-    //     console.log('setHoveredProject')
-    // }, [hoveredProject])
-
     const infoContRef = useRef<any>(null);
 
     const handleOnHover = () =>{
@@ -36,14 +29,14 @@ const ProjectInfo = ({setHoveredProject, hoveredProject}: {setHoveredProject: Fu
                project.current = defaultProject.current
            }} className=" mb-4 mt-2 rounded-sm flex items-center gap-2 border-2 border-gray-950 w-fit px-4 py-1 mx-auto bg-neutral-800 hover:bg-neutral-700">
                <p className="md:text-xs text-xs font-semibold uppercase">Projects</p>
-               <div className="border  h-4 aspect-square text-[10px] col-flex-center rounded-xs">5</div>
+               <div className="border  h-4 aspect-square text-[10px] col-flex-center rounded-xs">{projectList.length}</div>
            </div>
            <ul>
                {projectList.map((item, index) => (
                    <li key={index} onClick={()=> {
                        project.current = item
-                   }} className=" h-fit  w-full flex items-center">
-                       <div className={`h-full w-0.5 bg-white ${index == 0? "rounded-tr-sm" : "" } ${index == projectList.length -1? "rounded-br-sm" : "" } col-flex-center `}>
+                   }} className={` h-fit  w-full flex items-center ${index > 4? 'hidden' : '' }`}>
+                       <div className={`h-full w-0.5 bg-white ${index == 0? "rounded-tr-sm" : "" } ${index == 4? "rounded-br-sm" : "" } col-flex-center `}>
 
                        </div>
                        <div className="ml-4 h-fit py-2 w-[80%]">

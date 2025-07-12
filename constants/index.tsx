@@ -1,4 +1,4 @@
-import profilePic from '../Assets/profilePic.png'
+import profilePic from '../Assets/profileImg.jpg'
 
 // Contact Images
 import XIcon from '../Assets/X.png'
@@ -168,4 +168,5 @@ export const projectList = [
         link: '#',
         image: BgImage,
     },
+
 ]

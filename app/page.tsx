@@ -6,6 +6,7 @@ import HeaderPage from "@/components/Header/HeaderPage";
 import {useEffect, useRef, useState} from "react";
 import {project} from "@/constants/controller";
 import ProjectSectionPage from "@/components/projects/ProjectSectionPage";
+import SubtleBackground from "@/components/Sections/ui/subtleBg";
 
 export default function Home() {
     const [activePage, setActivePage] = useState('Home')
@@ -27,7 +28,7 @@ export default function Home() {
         <div className="relative z-10">
             <HeaderPage setActivePage={setActivePage} />
         </div>
-
+        <SubtleBackground/>
         <main className="w-full h-fit overflow-hidden relative z-20 ">
             <section className={` flex  w-full  transition-all duration-500 ${activePage=== 'Home'?' -translate-x-0 ' : activePage=='Projects'? '-translate-x-[100%]' :'-translate-x-[200%]'} `}>
 
